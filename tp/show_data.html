@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap">
+    <script src="https://kit.fontawesome.com/bb9a2dd8eb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="pag" href="index.html">Inicio</a>
+            <a class="pag" href="servicios.html">Servicios</a>
+            <a class="pag" href="sucursales.html">Sucursal</a>
+        </nav>
+        <h1 class="anim">Registro completado</h1>
+    </header>
+    <main class="contenedor">
+        <div>
+            <h2 class="h1">
+                Tus datos registrados:
+            </h2>
+
+            <table border="1" align=center width="auto">
+                <tr>
+                    <th align="center">Campo de formulario</th>
+                    <th align="center">Datos</th>
+                </tr>
+
+                <script language="javascript">
+                    var args = location.search.substr(1).split('&');
+                    for (var i = 0; i < args.length; ++i) {
+                        var parts = args[i].split('=');
+                        if (parts != null) {
+                            var field = parts[0];
+                            var value = parts[1];
+                            if (value == null) {
+                                value = "null"
+                            } else {
+                                value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+                            }
+
+                            document.writeln('<tr><td align="center">' + field + '</td>');
+                            document.writeln('<td align="center">' + value + '</td></tr>');
+                        }
+                    }
+                </script>
+                <noscript>
+</noscript>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div id="footer">
+            <!-- En los href irian los link a las redes sociales si estuvieran creadas -->
+            <a class="icon " href=" "><i class="fab fa-facebook fa-3x "></i></a>
+            <a class="icon " href=" "><i class="fab fa-instagram fa-3x "></i></a>
+            <a class="icon" href=""><i class="fab fa-twitter-square fa-3x"></i></a>
+            <a class="icon" href=""><i class="fab fa-youtube fa-3x"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
